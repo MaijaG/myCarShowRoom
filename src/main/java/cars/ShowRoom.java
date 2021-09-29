@@ -37,4 +37,40 @@ public class ShowRoom {
     }
     return "car removed successfuly";
     }
+
+    // find car by name
+    public Car findByName(String name) {
+        //loop over the cars in the showroom and chech each name equals to specified name
+        //return the car if true
+        for(Car car: cars){
+            if (car.name.equals(name)){
+                return car;
+
+            }
+        }
+        return null;
+    }
+    // Wiew all cars , view single car
+
+    public Car updateCar(int carIndex, Car car) {
+        return cars.set(carIndex, car);
+    }
+    public Car findByType(String type) {
+        for(Car car: cars){
+            if (car.type.equals(type)){
+                return car;
+
+            }
+        }
+        return null;
+    }
+    public Car findByManufacturer(String manufacturer) {
+        for(Car car: cars){
+            if (car.manufacturer.equals(manufacturer)){
+                return car;
+
+            }
+        }
+        return null;
+    }
 }
